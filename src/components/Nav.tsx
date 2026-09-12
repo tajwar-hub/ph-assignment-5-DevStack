@@ -2,7 +2,7 @@ import logo from '../assets/logo-text.png'
 
 const Nav = () => {
     return (
-        <div className='flex justify-between items-center mt-4 ml-2 mr-2 relative'>
+        <div className='container mx-auto flex justify-between items-center mt-4 '>
 
 
             <button className="md:hidden p-2 text-base-content">

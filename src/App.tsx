@@ -5,8 +5,7 @@ import { Suspense, use } from "react"
 import Technologies from "./components/technologies/Technologies"
 
 
-
-const technologiesFetch = async(): Promise<ITechnologyTypes[]> => {
+const technologiesFetch = async (): Promise<ITechnologyTypes[]> => {
   const res = await fetch('/public/data.json')
   const data = await res.json()
   return data
@@ -21,13 +20,12 @@ function App() {
 
   return (
     <>
-       <Nav></Nav>
-       <Banner></Banner>
+      <Nav></Nav>
+      <Banner></Banner>
 
-       <Suspense fallback ={`Loading... `}>
-        <Technologies technologiesPromise = {technologies}/>
-        
-       </Suspense>
+      <Suspense fallback={`Loading... `}>
+        <Technologies technologiesPromise={technologies} />
+      </Suspense>
     </>
   )
 }

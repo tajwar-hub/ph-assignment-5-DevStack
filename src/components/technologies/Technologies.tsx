@@ -31,9 +31,9 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
     <div className='container mx-auto mt-20'>
       <div>
         <p className="font-bold text-4xl"> Explore The
-          <span className="bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-transparent">Technologies</span>
+          <span className="bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-transparent"> Technologies</span>
         </p>
-        <p className="text-gray-500"> Pick one technology per catagory to build your ideal stack </p>
+        <p className="text-gray-500 mt-2"> Pick one technology per catagory to build your ideal stack </p>
       </div>
 
       <div className="flex gap-6 mt-6 items-start">
@@ -53,7 +53,7 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
           }
         </div>
 
-        <div className="w-72 sticky top-6">
+        <div className="w-72 ">
           <SideBarCard
             selectedStack={selectedStack}
             onRemove={handleRemove}

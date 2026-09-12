@@ -8,11 +8,12 @@ interface TechnologyCardProps {
 
 const TechnologyCard = ({technologyCardPromise}:TechnologyCardProps) => {
     return (
-        <div className="card border border-base-200 bg-base-100 shadow-sm p-6">
+
       
-     
-      <div className="flex justify-between items-start mb-4">
-        <div className="flex gap-3 items-center">
+    <div className=" border border-base-200 shadow-sm p-6">
+      
+      <div className="flex justify-between mb-4">
+        <div className="flex flex-col gap-1 items-center">
           <img src={technologyCardPromise.icon} alt={technologyCardPromise.name} className="w-8 h-8" />
           <h3 className="text-xl font-bold">{technologyCardPromise.name}</h3>
         </div>
@@ -30,7 +31,7 @@ const TechnologyCard = ({technologyCardPromise}:TechnologyCardProps) => {
       <div className="flex justify-between items-center text-xs text-gray-400 font-semibold mb-6">
         <span className="bg-gray-100 px-2 py-1 rounded">{technologyCardPromise.category}</span>
         <span>{technologyCardPromise.difficulty}</span>
-        <span className="flex items-center text-orange-400 text-sm">★ {technologyCardPromise.rating}</span>
+        <p className=" flex justify-between items-center gap-1 text-orange-400 text-sm">★<span className='text-stone-400'> {technologyCardPromise.rating}</span></p>     
       </div>
 
     

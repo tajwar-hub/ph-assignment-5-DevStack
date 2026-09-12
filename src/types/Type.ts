@@ -1,4 +1,4 @@
-export interface Technology {
+export interface ITechnologyTypes {
   id: string;
   name: string;
   category: string;

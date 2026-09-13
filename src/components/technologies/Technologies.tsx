@@ -36,8 +36,8 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
         <p className="text-gray-500 mt-2"> Pick one technology per catagory to build your ideal stack </p>
       </div>
 
-      <div className="flex gap-6 mt-6 items-start">
-        <div className='grid grid-cols-3 gap-5 flex-1'>
+      <div className="flex flex-col lg:flex-row gap-6 mt-6 items-start">
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 flex-1'>
           {
             technologiesPromise.map((tech) => {
               const isAdded = selectedStack.some((t) => t.id === tech.id);
@@ -53,7 +53,7 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
           }
         </div>
 
-        <div className="w-72 ">
+        <div className="w-72">
           <SideBarCard
             selectedStack={selectedStack}
             onRemove={handleRemove}

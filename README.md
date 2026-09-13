@@ -33,7 +33,7 @@ JSX stands for JavaScript XML. It is a syntax extension that allows us to write 
 *In this project, I used it to Add, Remove technologies in the handler functions of the parent component Technologies.tsx file which were passed to its child components TechnologyCard.tsx and SideBarCard.tsx as props. Then they used it to manage their individual functionalities*
 
 **What does the `useEffect` hook do, and why did you need it to load the JSON data?**
-`useEffect` handles "side effects"—operations that reach outside the component, like fetching data or setting timers. I didn't use any `useEffect` hook in my project.
+`useEffect` handles operations that reach outside the component, like fetching data or setting timers. I didn't use any `useEffect` hook in my project.
 
 **Why does every item in a `.map()` list need a unique `key` prop?**
 React uses the `key` to keep track of exactly which items in a list have changed, been added or been removed. Without unique keys, React would have to re-render the entire list from scratch during an update, which is slow and risky for a large project.

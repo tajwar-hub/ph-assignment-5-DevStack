@@ -2,7 +2,7 @@ import type { ITechnologyTypes } from '../../types/Type';
 
 interface TechnologyCardProps {
   technologyCardPromise: ITechnologyTypes;
-  isAdded: boolean;  
+  isAdded: boolean;
   onAdd: (technology: ITechnologyTypes) => void;
 }
 
@@ -36,14 +36,11 @@ const TechnologyCard = ({ technologyCardPromise, isAdded, onAdd }: TechnologyCar
       </div>
 
       <button
-        
         onClick={() => onAdd(technologyCardPromise)}
         className="btn btn-primary w-full bg-[#0F172A] text-white hover:bg-slate-800 rounded-xl"
-        disabled={isAdded}
       >
         {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
-
     </div>
   );
 };

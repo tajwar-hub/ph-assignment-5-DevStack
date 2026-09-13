@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { ITechnologyTypes } from '../../types/Type';
 import TechnologyCard from './TechnologyCard';
 import SideBarCard from './SideBarCard';
+import { toast } from 'react-toastify';
 
 interface TechnologiesProps {
   technologiesPromise: ITechnologyTypes[];
@@ -12,19 +13,23 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
 
   const handleRemove = (id: string) => {
     setSelectedStack(selectedStack.filter((technology) => technology.id !== id));
+    toast(`Technology removed from the stack !`);
   };
 
   const handleRemoveAll = () => {
     setSelectedStack([]);
+    toast(`All Technologies removed from the stack !`)
   };
 
   const handleAdd = (technology: ITechnologyTypes) => {
     const alreadyAdded = selectedStack.some((t) => t.id === technology.id);
     if (alreadyAdded) {
-      alert(`${technology.name} is already in your stack!`);
+      toast(`${technology.name} is already in your stack!`);
       return;
     }
+    
     setSelectedStack([...selectedStack, technology]);
+    toast(`${technology.name} added to your stack...`)
   };
 
   return (

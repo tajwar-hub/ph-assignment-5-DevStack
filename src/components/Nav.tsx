@@ -1,12 +1,11 @@
 import logo from '../assets/logo-text.png'
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Nav = () => {
     return (
-        <div className='container mx-auto flex justify-between items-center mt-4 sticky top-2 bg-amber-50'>
-            <button className="md:hidden p-2 text-base-content">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+        <div className='container mx-auto flex justify-between items-center sticky top-2 bg-amber-50 h-20'>
+            <button className="md:hidden p-2">
+                <GiHamburgerMenu />
             </button>
 
             <img src={logo} alt="logo" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0" />

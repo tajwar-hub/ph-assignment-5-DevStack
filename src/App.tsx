@@ -5,7 +5,6 @@ import { Suspense, use } from "react"
 import Technologies from "./components/technologies/Technologies"
 import Footer from "./components/Footer"
 
-
 const technologiesFetch = async (): Promise<ITechnologyTypes[]> => {
   const res = await fetch('/public/data.json')
   const data = await res.json()
@@ -14,9 +13,7 @@ const technologiesFetch = async (): Promise<ITechnologyTypes[]> => {
 
 const technologiesPromise = technologiesFetch();
 
-
 function App() {
-
   const technologies = use(technologiesPromise);
 
   return (

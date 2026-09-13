@@ -9,7 +9,7 @@ interface SideBarCardProps {
 const SideBarCard = ({ selectedStack, onRemove, onRemoveAll }: SideBarCardProps) => {
   return (
 
-    <div className="bg-white rounded-2xl shadow-sm p-6 w-full">
+    <div className="bg-white rounded-2xl shadow-sm p-6 w-160 lg:w-full">
       <h2 className="font-bold text-lg">Your Stack</h2>
       <p className="text-sm text-gray-400 mb-4"> {selectedStack.length} Technologies Selected </p>
 

@@ -1,10 +1,11 @@
+
 import logo from '../assets/logo-text.png'
 
 const Footer = () => {
   return (
     <footer className="container mx-auto bg-base-300 rounded-2xl mt-20 px-10 py-12">
       <div className="grid grid-cols-5 gap-10">
-        <div className='col-span-2'>
+        <div className='col-span-5 justify-items-center md:col-span-2'>
           <img src={logo} alt="logo" className=" " />
 
           <p className="mt-3 text-sm opacity-70">
@@ -19,7 +20,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div>
+        <div className='hidden md:block'>
           <p className="font-bold mb-4">Product</p>
 
           <p className="text-sm mb-2 cursor-pointer">Technologies</p>
@@ -27,7 +28,7 @@ const Footer = () => {
           <p className="text-sm mb-2 cursor-pointer">Features</p>
         </div>
 
-        <div>
+        <div className='hidden md:block'>
           <p className="font-bold mb-4">Company</p>
 
           <p className="text-sm mb-2 cursor-pointer">About</p>
@@ -35,7 +36,7 @@ const Footer = () => {
           <p className="text-sm mb-2 cursor-pointer">Careers</p>
         </div>
 
-        <div>
+        <div className='hidden md:block'>
           <p className="font-bold mb-4">Legal</p>
 
           <p className="text-sm mb-2 cursor-pointer">Privacy Policy</p>

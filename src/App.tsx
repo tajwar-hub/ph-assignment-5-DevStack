@@ -8,13 +8,14 @@ import Footer from "./components/Footer"
 const technologiesFetch = async (): Promise<ITechnologyTypes[]> => {
   const res = await fetch('/public/data.json')
   const data = await res.json()
-  return data
+  return data;
 }
 
 const technologiesPromise = technologiesFetch();
 
 function App() {
   const technologies = use(technologiesPromise);
+  // const [technologies] = useState(() => technologiesFetch())
 
   return (
     <>
